@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/windyakin/delete-package-versions-keep-latest#readme",
   "engines": {
-    "node": ">= 14"
+    "node": ">= 12"
   },
   "devDependencies": {
     "@octokit/types": "^6.12.2",
