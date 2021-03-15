@@ -1,0 +1,42 @@
+name: Delete Package Versions Keep Latest
+
+description: Specify the number of versions to keep actions
+
+inputs:
+  owner:
+    description: >
+      Owner of the repo containing the package version to delete.
+      Defaults to the owner of the repo running the action.
+    required: false
+
+  repo:
+    description: >
+      Repo containing the package version to delete.
+      Defaults to the repo running the action.
+    required: false
+
+  package-name:
+    description: >
+      Name of the package containing the version to delete.
+      Required if dynamically deleting oldest versions.
+    required: false
+
+  keep-latest-package-versions:
+    description: >
+      Number of versions to keep the latest version.
+      Defaults to 10.
+    required: false
+    default: "10"
+
+  token:
+    description: >
+      Token with the necessary scopes to delete package versions.
+      If keep-latest-package-versions is used the token also needs the read packages scope.
+      Defaults to github.token scoped to the repo running the action. To delete package versions
+      of a package outside the repo the action is running in use a Personal Access Token stored as a secret.
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: 'node14'
+  main: 'dist/index.js'
