@@ -2,6 +2,10 @@
 
 [delete-package-versions](https://github.com/actions/delete-package-versions) will delete the specified number of old packages. But in this action, you can specify the number of latest packages you want to keep, and only remove older packages.
 
+<p align="center">
+  <img src="doc/description.png">
+</p>
+
 ## Getting started
 
 ```yaml
