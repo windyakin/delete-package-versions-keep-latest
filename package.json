@@ -4,6 +4,7 @@
   "description": "Specify the number of versions to keep actions",
   "main": "dist/index.js",
   "scripts": {
+    "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && ncc build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
@@ -22,6 +23,7 @@
     "node": ">= 14"
   },
   "devDependencies": {
+    "@octokit/types": "^6.12.2",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "@vercel/ncc": "^0.27.0",
@@ -30,6 +32,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0"
+    "@actions/github": "^4.0.0",
+    "@octokit/graphql": "^4.6.1"
   }
 }
