@@ -27,7 +27,9 @@ import {
       authorization: `token ${input.token}`,
       accept: 'application/vnd.github.package-deletes-preview+json'
     },
-    baseUrl: process.env.GITHUB_GRAPHQL_URL
+    // NOTE: API のエンドポイントURLを渡すといい感じにしてくれる
+    // https://github.com/octokit/graphql.js/blob/master/src/graphql.ts#L65-L70
+    baseUrl: process.env.GITHUB_API_URL
   });
 
   const latestVersionsResponse: GetVersionsResponse = await graphqlClient(GetVersionsQuery, {
