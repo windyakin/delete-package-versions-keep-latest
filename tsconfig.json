@@ -6,7 +6,12 @@
     "rootDir": "./src",
     "strict": true,
     "noImplicitAny": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "lib": [
+      "es6",
+      "dom",
+      "esnext.asynciterable"
+    ]
   },
   "exclude": ["node_modules"]
 }
