@@ -34,6 +34,6 @@
   "dependencies": {
     "@actions/core": "^1.4.0",
     "@actions/github": "^5.0.0",
-    "@octokit/graphql": "^4.6.2"
+    "@octokit/graphql": "^4.6.3"
   }
 }
